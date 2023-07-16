@@ -11,7 +11,7 @@ class _LoginScreenState extends State<LoginScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.black87,
-      body: SingleChildScrollView(
+      body: SingleChildScrollView(physics: BouncingScrollPhysics(),
         child: Column(crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Container(width:MediaQuery.of(context).size.width,height: MediaQuery.of(context).size.height*0.6,
@@ -28,7 +28,8 @@ class _LoginScreenState extends State<LoginScreen> {
                     Text('New Goal Criteria',style: TextStyle(fontSize: 20,
                         fontWeight: FontWeight.bold,color: Colors.grey.shade400)),
                     SizedBox(height: 20,),
-                    Container(width: MediaQuery.of(context).size.width,height: 180,
+                    Container(child:Image.asset('assets/coins.png',height: 180)
+              ,width: MediaQuery.of(context).size.width,height: 180,
                     decoration: BoxDecoration(borderRadius: BorderRadius.circular(10),
                       color: Colors.blueGrey.shade900
                     ),),
@@ -71,7 +72,8 @@ class _LoginScreenState extends State<LoginScreen> {
                     Text('You can get upto 3 supercoins for every 100r spent',
                         style: TextStyle(fontSize: 15,color: Colors.grey.shade700)),
                     SizedBox(height: 20,),
-                    Container(width: MediaQuery.of(context).size.width,height: 180,
+                    Container(child:Image.asset('assets/coins.png',height: 180)
+                      ,width: MediaQuery.of(context).size.width,height: 180,
                       decoration: BoxDecoration(borderRadius: BorderRadius.circular(10),
                           color: Colors.blueGrey.shade900
                       ),),
